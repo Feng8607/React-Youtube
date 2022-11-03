@@ -1,0 +1,17 @@
+.profileDemo {
+  .chanel {
+    text-align: center;
+    padding-top: 1.5rem;
+  }
+}
+@media (max-width: 900px) {
+  .profileDemo {
+    .chanel {
+      height: 70vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}

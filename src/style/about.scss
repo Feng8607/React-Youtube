@@ -1,0 +1,59 @@
+.profileDemo {
+  .aboutList {
+    display: flex;
+    .aboutLeft {
+      flex: 2;
+      padding-bottom: 2rem;
+      margin-right: 1.5rem;
+      border-bottom: solid #5a5a5a 1px;
+      h4 {
+        padding: 0.75rem 0;
+        font-weight: 500;
+        color: #5a5a5a;
+        button {
+          border: none;
+          outline: 0;
+          padding: 1rem;
+          cursor: pointer;
+        }
+      }
+      .local {
+        display: flex;
+      }
+    }
+    .aboutRight {
+      flex: 1;
+      margin-left: 3.5rem;
+      p {
+        padding: 0.75rem 0;
+        border-bottom: solid #5a5a5a 1px;
+      }
+    }
+  }
+  .smallaboutList {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .profileDemo {
+    .aboutList {
+      display: none;
+    }
+    .smallaboutList {
+      display: block;
+      padding: 1rem;
+      h4,
+      p {
+        margin-bottom: 1rem;
+      }
+      h4 {
+        font-size: 1.5rem;
+      }
+      img {
+        width: 1rem;
+        margin-right: 0.5rem;
+      }
+    }
+  }
+} ;

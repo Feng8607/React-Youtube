@@ -1,0 +1,95 @@
+.profiList {
+  margin: 0 3rem;
+  .profileDemo {
+    .playcolumn {
+      .allList {
+        margin: 0;
+        padding-top: 1.5rem;
+      }
+      .playList {
+        border-bottom: solid #5a5a5a 1px;
+      }
+      .playList,
+      .storageList {
+        .finshList {
+          display: flex;
+          .fontActve {
+            color: #5a5a5a;
+          }
+          div {
+            padding-right: 0.5rem;
+            position: relative;
+            margin: 0.5rem 0;
+            img {
+              width: 12rem;
+              border-radius: 12px;
+            }
+            img:nth-child(2) {
+              position: absolute;
+              top: 0;
+              left: 0;
+              opacity: 0;
+            }
+            img:nth-child(2):hover {
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .profiList {
+    .profileDemo {
+      .playcolumn {
+        .allList {
+          display: none;
+        }
+        .playList {
+          .finshList {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .finshBox {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              img {
+                width: 50%;
+              }
+              .listContent {
+                display: flex;
+                flex-direction: column;
+                width: 50%;
+                padding-left: 1rem;
+              }
+            }
+          }
+        }
+        .storageList {
+          .finshList {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            .finshBox {
+              width: 100%;
+              display: flex;
+              justify-content: space-between;
+              img {
+                width: 50%;
+              }
+              .listContent {
+                display: flex;
+                width: 50%;
+                flex-direction: column;
+                padding-left: 1rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

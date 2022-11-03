@@ -1,0 +1,1048 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+a {
+  text-decoration: none;
+  color: black;
+}
+img {
+  cursor: pointer;
+}
+header {
+  .navLeft {
+    display: flex;
+    align-items: center;
+    .menuIcon {
+      width: 2rem;
+      margin-right: 25px;
+    }
+    .logo {
+      width: 130px;
+    }
+  }
+  .navRight {
+    img {
+      width: 25px;
+      margin-right: 25px;
+    }
+    .profileList {
+      position: relative;
+      .userIcon {
+        width: 3rem;
+        border-radius: 50%;
+        margin-right: 0;
+      }
+      .navList {
+        background: #fff;
+        display: none;
+        height: 100vh;
+        //字塊設定在一個區域有滑軌
+        overflow: scroll;
+        hr {
+          border: 0;
+          height: 1px;
+          background-color: #ccc;
+        }
+        .canelIcon {
+          display: none;
+        }
+        .proInfo {
+          padding: 0 5rem 0 0;
+          display: flex;
+          align-items: center;
+          justify-content: space-around;
+          margin: 0.5rem 0.75rem;
+          img {
+            flex-basis: 1;
+            width: 3.5rem;
+            height: 3.5rem;
+            border-radius: 50%;
+          }
+          .proContent {
+            width: 8rem;
+            p {
+              margin: 0.2rem 0;
+              font-size: 1rem;
+            }
+            .account {
+              color: #4242e0;
+            }
+          }
+        }
+        .listContent {
+          .more {
+            justify-content: space-between;
+            img {
+              width: 1.5rem;
+            }
+          }
+          div {
+            display: flex;
+            padding: 0.5rem;
+
+            p {
+              width: fit-content;
+              cursor: pointer;
+              img {
+                width: 1.5rem;
+              }
+            }
+          }
+        }
+      }
+      .navList::-webkit-scrollbar {
+        display: none;
+      }
+      .proDisplay {
+        display: block;
+        position: absolute;
+        background-color: #ffffff;
+        right: 3rem;
+        top: 0;
+      }
+    }
+  }
+  .navMiddle {
+    .searchBox {
+      border: 1px solid #ccc;
+      margin-right: 15px;
+      padding: 8px 12px;
+      border-radius: 25px;
+      input {
+        width: 400px;
+        border: 0;
+        outline: 0;
+        background: transparent;
+      }
+      img {
+        width: 15px;
+      }
+    }
+    .micIcon {
+      width: 2.5rem;
+      background: #f9f9ff;
+      border-radius: 50%;
+    }
+  }
+  .flexDiv {
+    display: flex;
+    align-items: center;
+  }
+  nav {
+    padding: 10px 2%;
+    justify-content: space-between;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    min-height: 3rem;
+  }
+}
+.sideBar {
+  z-index: 5;
+  background-color: #fff;
+  width: 17%;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  padding-top: 80px;
+  height: 100vh;
+  //字塊設定在一個區域有滑軌
+  overflow: scroll;
+  li:hover {
+    background-color: #ccc;
+  }
+  .shortcutLinks {
+    li {
+      display: flex;
+      align-items: center;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      width: 100%;
+      flex-wrap: wrap;
+      cursor: pointer;
+      img {
+        width: 20px;
+        margin-right: 1rem;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+    li:first-child {
+      color: red;
+    }
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #ccc;
+      width: 85%;
+    }
+  }
+  .subscribedList {
+    h3 {
+      font-size: 1rem;
+      margin: 20px 0;
+      color: #5a5a5a;
+    }
+    li {
+      display: flex;
+      align-items: center;
+      margin: 0.5rem 0;
+      width: 100%;
+      flex-wrap: wrap;
+      cursor: pointer;
+      img {
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        margin-right: 20px;
+      }
+      p {
+        font-size: 1rem;
+      }
+    }
+    hr {
+      border: 0;
+      height: 1px;
+      background-color: #ccc;
+      width: 85%;
+    }
+  }
+  li,
+  h3 {
+    padding-left: 2rem;
+  }
+}
+.sideBar::-webkit-scrollbar {
+  display: none;
+}
+.smallSidebar {
+  width: 5%;
+  li {
+    p {
+      display: none;
+    }
+  }
+  .shortcutLinks {
+    li,
+    h3 {
+      padding-left: 2rem;
+    }
+  }
+  .subscribedList {
+    display: none;
+  }
+}
+.hiderSideBar {
+  display: none;
+}
+.displaySidebar {
+  z-index: 12;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  position: fixed;
+  top: 0;
+  .hiderBox {
+    height: 100vh;
+    //字塊設定在一個區域有滑軌
+    overflow: scroll;
+    background-color: #fff;
+    flex: 1;
+    width: 15%;
+    li:hover {
+      background-color: #ccc;
+    }
+    .shortcutLinks {
+      .linkLogo {
+        display: flex;
+        align-items: center;
+        padding-left: 1.5rem;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        .Icon {
+          width: 3rem;
+          padding-right: 1rem;
+        }
+        .logo {
+          width: 8rem;
+        }
+      }
+      li {
+        display: flex;
+        align-items: center;
+        padding: 10px 0;
+        width: 100%;
+        flex-wrap: wrap;
+        padding-left: 2rem;
+
+        cursor: pointer;
+        img {
+          width: 20px;
+          margin-right: 1rem;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+      li:first-child {
+        color: red;
+      }
+      hr {
+        border: 0;
+        height: 1px;
+        background-color: #ccc;
+        width: 85%;
+      }
+    }
+    .subscribedList {
+      h3 {
+        font-size: 1rem;
+        margin: 20px 0;
+        color: #5a5a5a;
+      }
+      li {
+        display: flex;
+        align-items: center;
+        margin: 0.5rem 0;
+        width: 100%;
+        flex-wrap: wrap;
+        cursor: pointer;
+        img {
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          margin-right: 20px;
+        }
+        p {
+          font-size: 1rem;
+        }
+      }
+      hr {
+        border: 0;
+        height: 1px;
+        background-color: #ccc;
+        width: 85%;
+      }
+    }
+  }
+
+  .background {
+    width: 85%;
+    flex: 4;
+    height: 100vh;
+    background-color: #5a5a5a;
+    opacity: 0.3;
+    z-index: 12;
+  }
+  li,
+  h3 {
+    padding-left: 2rem;
+  }
+}
+main {
+  .banner {
+    position: sticky;
+    top: 4.5rem;
+    padding: 0.5rem 0;
+    width: 100%;
+    background: #fff;
+    ul {
+      display: flex;
+      list-style: none;
+      justify-content: center;
+      li {
+        margin: 0 0.5rem;
+        background: #f9f9ff;
+        padding: 0.25rem 0.5rem;
+        font-size: 1rem;
+        border-radius: 1.5rem;
+        border: 1px solid #ccc;
+        cursor: pointer;
+      }
+    }
+  }
+  .buttomHr {
+    position: sticky;
+    top: 7.5rem;
+    z-index: 3;
+  }
+  .topHr {
+    position: sticky;
+    top: 4.5rem;
+    z-index: 3;
+  }
+  hr {
+    border: 0;
+    height: 1px;
+    background-color: rgb(180, 180, 180);
+  }
+  .container {
+    background: #f9f9ff;
+    padding-left: 17%;
+    padding-top: 4rem;
+    padding-bottom: 20px;
+
+    .listContainer {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      grid-column-gap: 16px;
+      grid-row-gap: 30px;
+      margin-top: 15px;
+
+      .yuList {
+        min-height: 20vh;
+        margin: 1rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-top: 7px;
+        flex-wrap: wrap;
+        flex: 1 1 15vw;
+        .thumbnail1 {
+          width: 100%;
+          object-fit: cover;
+          border-radius: 5px;
+        }
+        .cardContent {
+          display: flex;
+          margin-top: 7px;
+          align-items: flex-start;
+          width: 100%;
+          img {
+            width: 3rem;
+            margin-right: 1rem;
+            border-radius: 50%;
+          }
+          .ytInfo {
+            display: flex;
+            flex-direction: column;
+            color: #5a5a5a;
+            font-size: 1rem;
+            flex: 1 1 250px;
+            h4 {
+              color: #000;
+              font-weight: 600;
+              display: block;
+              margin-bottom: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+  .largeContainer {
+    padding-left: 5%;
+  }
+}
+.playContainer {
+  padding-left: 2%;
+  padding-top: 4.5rem;
+  .row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .playVideo {
+      flex-basis: 65%;
+      video {
+        width: 100%;
+      }
+      .tags {
+        display: flex;
+        p {
+          color: #0000ff;
+          font-size: 1rem;
+          cursor: pointer;
+        }
+      }
+      h3 {
+        font-weight: 600;
+        font-size: 2rem;
+      }
+      .playVideoinfo {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        margin-top: 10px;
+        font-size: 1rem;
+        color: #5a5a5a;
+        p {
+          display: inline-flex;
+          align-items: center;
+
+          cursor: pointer;
+          img {
+            width: 1.5rem;
+            margin-right: 0.6rem;
+            margin-left: 1.3rem;
+          }
+        }
+      }
+      hr {
+        border: 0;
+        height: 1px;
+        background: #ccc;
+        margin: 10px 0;
+      }
+      .plubLisher {
+        display: flex;
+        align-items: center;
+        margin-top: 1.7rem;
+        img {
+          width: 3.4rem;
+          border-radius: 50%;
+          margin-right: 1.25rem;
+        }
+        div {
+          flex: 1;
+          line-height: 1.5rem;
+          p {
+            color: #000;
+            font-weight: 600;
+            font-size: 1.5rem;
+          }
+          span {
+            font-size: 1rem;
+            color: #5a5a5a;
+          }
+        }
+        .button1 {
+          background: white;
+          border-color: #0000ff;
+          color: #0000ff;
+          padding: 0.5rem 1.25rem;
+          border-radius: 0.2rem;
+          border: 1px solid;
+          margin: 0 1rem;
+          cursor: pointer;
+        }
+        .button2 {
+          background: rgb(190, 0, 0);
+          color: white;
+          border: none;
+          outline: none;
+          border-radius: 0.2rem;
+          padding: 0.5rem 1.25rem;
+          cursor: pointer;
+        }
+      }
+      .ytDescription {
+        padding-left: 4.5rem;
+        margin-bottom: 0.5rem;
+        color: #5a5a5a;
+        p {
+          font-size: 1rem;
+          margin-bottom: 0.5rem;
+        }
+      }
+      .comment {
+        h4 {
+          font-size: 1rem;
+          margin-top: 2rem;
+        }
+      }
+      .addComment {
+        display: flex;
+        align-items: center;
+        margin: 2.5rem 0;
+
+        img {
+          width: 3rem;
+          border-radius: 50%;
+          margin-right: 1.5rem;
+        }
+        input {
+          border: 0;
+          outline: 0;
+          width: 100%;
+          border-bottom: #5a5a5a 1px solid;
+          padding-top: 0.8rem;
+          background: transparent;
+        }
+      }
+      .oldComment {
+        display: flex;
+        align-items: center;
+        margin: 1rem 0;
+        .CommentPic {
+          width: 3rem;
+          border-radius: 50%;
+          margin-right: 1rem;
+        }
+        h4 {
+          margin-bottom: 0.5rem;
+        }
+        span {
+          font-size: 0.8rem;
+          color: #5a5a5a;
+          font-weight: 500;
+          margin-left: 0.5rem;
+        }
+        p,
+        h4 {
+          font-size: 1rem;
+        }
+        .likComment {
+          display: flex;
+          align-items: center;
+          img {
+            width: 1rem;
+          }
+          .commentLike {
+            margin-top: 0.5rem;
+            padding-right: 0.5rem;
+          }
+        }
+      }
+    }
+    .rightSiderbar {
+      flex-basis: 32%;
+      padding-right: 5%;
+      .sideVidelist {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 8px;
+        .smallThumbnail {
+          flex-basis: 40%;
+          img {
+            width: 100%;
+            border-radius: 8px;
+          }
+        }
+        .ytInfo {
+          flex-basis: 55%;
+          p {
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+}
+.profile {
+  .column {
+    padding-left: 17%;
+    padding-right: 2%;
+    padding-top: 4.5rem;
+    background: #f9f9ff;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    .profiList {
+      margin: 1.5rem 3rem 0 3rem;
+      .profileTop {
+        display: flex;
+        align-items: center;
+        img {
+          width: 5rem;
+          border-radius: 50%;
+          margin-right: 1.25rem;
+        }
+        div {
+          flex: 1;
+        }
+        .button1,
+        .button2 {
+          border-radius: 24px;
+          background: #4242e0;
+          color: rgb(255, 255, 255);
+          margin: 0 0.3rem;
+          padding: 0.5rem 0.5rem;
+          border: 0;
+          font-size: 1.1rem;
+          outline: 0;
+          cursor: pointer;
+        }
+      }
+      .profileInfo {
+        display: flex;
+        margin-top: 1rem;
+        img {
+          width: 1.25rem;
+          height: 1.25rem;
+          margin: 0 1rem 1rem 1rem;
+        }
+        .playlistActive {
+          border-bottom: #000 solid 2px;
+          padding-bottom: 1rem;
+        }
+        p {
+          text-align: center;
+          padding: 0 2rem;
+          font-size: 1rem;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+  .largeContainer {
+    padding-left: 7%;
+  }
+}
+.columnBottom {
+  padding-left: 17%;
+  padding-right: 2%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background: #f9f9ff;
+  min-height: 100vh;
+  .profiList {
+    margin: 0 3rem;
+  }
+}
+@media (max-width: 1300px) {
+  main {
+    .container {
+      background: #f9f9ff;
+      padding-left: 17%;
+      padding-top: 4rem;
+      padding-bottom: 20px;
+    }
+    .banner {
+      position: sticky;
+      top: 4.5rem;
+      width: 100%;
+      outline: none;
+      overflow-x: scroll; //滑軌橫向，xy可以顛倒
+      overflow-y: hidden; //直向隱藏
+      white-space: nowrap; //死都不換行
+      display: flex;
+      background: #fff;
+    }
+    .banner::-webkit-scrollbar {
+      display: none;
+    }
+    hr {
+      display: none;
+    }
+    .largeContainer {
+      padding-left: 5%;
+    }
+  }
+  .sideBar {
+    li,
+    h3 {
+      padding-left: 1rem;
+    }
+  }
+  .smallSidebar {
+    .shortcutLinks {
+      li,
+      h3 {
+        padding-left: 1rem;
+      }
+    }
+  }
+  .playContainer {
+    .row {
+      .playVideo {
+        .playVideoinfo {
+          p {
+            margin-left: 0;
+          }
+          div {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1160px) {
+  .playContainer {
+    .row {
+      .playVideo {
+        flex-basis: 60%;
+      }
+      .rightSiderbar {
+        flex-basis: 36%;
+      }
+    }
+  }
+}
+@media (max-width: 1050px) {
+  .sideBar {
+    li,
+    h3 {
+      padding-left: 0.2rem;
+    }
+    .subscribedList {
+      li {
+        img {
+          margin-right: 0.2rem;
+        }
+      }
+    }
+  }
+  .smallSidebar {
+    .shortcutLinks {
+      li,
+      h3 {
+        padding-left: 0.5rem;
+      }
+    }
+  }
+}
+@media (max-width: 900px) {
+  header {
+    .navLeft {
+      .menuIcon {
+        display: none;
+      }
+      .logo {
+        width: 90px;
+      }
+    }
+    .navRight {
+      .profileList {
+        position: static;
+        .proDisplay {
+          right: 0;
+        }
+        .navList {
+          width: 100vw;
+          height: 100vh;
+          .canelIcon {
+            display: flex;
+            img {
+              width: 25px;
+              margin: 0.25rem;
+            }
+          }
+        }
+      }
+      .rightIcon {
+        display: none;
+      }
+
+      .userIcon {
+        display: block;
+        width: 2.5rem;
+      }
+    }
+    .navMiddle {
+      .searchBox {
+        margin-right: 0;
+        input {
+          width: 30vw;
+        }
+      }
+      .micIcon {
+        display: none;
+      }
+    }
+    nav {
+      min-height: 4.5rem;
+    }
+  }
+  .sideBar {
+    display: none;
+  }
+  main {
+    .container {
+      background: #f9f9ff;
+      padding-left: 0;
+      padding-top: 0;
+      padding-bottom: 20px;
+      .listContainer {
+        margin-top: 4.25rem;
+      }
+    }
+    .banner {
+      position: sticky;
+      top: 4.5rem;
+      width: 100%;
+      outline: none;
+      overflow-x: scroll; //滑軌橫向，xy可以顛倒
+      overflow-y: hidden; //直向隱藏
+      white-space: nowrap; //死都不換行
+      display: flex;
+      background: #fff;
+    }
+    .banner::-webkit-scrollbar {
+      display: none;
+    }
+    hr {
+      display: none;
+    }
+    .largeContainer {
+      padding-left: 0;
+    }
+  }
+  .playContainer {
+    padding-left: 0;
+    padding-top: 0;
+    padding-bottom: 3rem;
+    .row {
+      padding-top: 4.5rem;
+      display: block;
+      .playVideo {
+        flex-basis: 100%;
+        .playVideoinfo {
+          p {
+            margin-left: 0;
+          }
+          div {
+            width: 100vw;
+            height: 70px;
+            //字塊設定在一個區域有滑軌
+            overflow-x: scroll;
+            overflow-y: hidden;
+            display: flex;
+            flex-wrap: nowrap;
+            p {
+              display: flex;
+              flex-direction: column;
+              white-space: nowrap;
+              margin-left: 0;
+              margin-right: 1.25rem;
+              margin-top: 1.25rem;
+            }
+          }
+        }
+      }
+      .rightSiderbar {
+        flex-basis: 100%;
+        padding-right: 0;
+        .sideVidelist {
+          flex-direction: column;
+        }
+      }
+    }
+  }
+  .profile {
+    margin: 0;
+    .column {
+      padding-left: 0;
+      padding-right: 0;
+      .profiList {
+        margin: 0;
+        padding-top: 0;
+        .profileTop {
+          display: none;
+        }
+        .profileInfo {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          height: 100%;
+          outline: none;
+          overflow-x: scroll; //滑軌橫向，xy可以顛倒
+          overflow-y: hidden; //直向隱藏
+          white-space: nowrap; //死都不換行
+          margin: 0;
+          border-bottom: solid 1px #c8c8c8;
+          padding-top: 0.5rem;
+          img {
+            display: none;
+          }
+          .playlistActive {
+            padding-bottom: 0.5rem;
+          }
+        }
+        .profileInfo::-webkit-scrollbar {
+          display: none;
+        }
+      }
+    }
+    .largeContainer {
+      padding-left: 0;
+    }
+  }
+  .columnBottom {
+    padding-left: 0;
+    padding-right: 0;
+    padding-top: 0;
+    padding-bottom: 3rem;
+    .profiList {
+      margin: 0;
+      padding-top: 0;
+      .profileDemo {
+        a {
+          display: flex;
+          flex-direction: column;
+          video {
+            width: 100vw;
+            padding-left: 0.5rem;
+            padding-right: 0.5rem;
+          }
+          div {
+            display: flex;
+            .demoContent {
+              display: flex;
+              flex-direction: column;
+              margin: 0.5rem;
+            }
+            .demoPic {
+              display: block;
+              margin: 0.5rem;
+              width: 3rem;
+              height: 3rem;
+              border-radius: 50%;
+            }
+          }
+        }
+      }
+
+      .card__container {
+        display: none;
+      }
+      .smallSwiper {
+        display: flex;
+        flex-direction: column;
+        .sideVidelist {
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 8px;
+          .smallThumbnail {
+            flex-basis: 40%;
+            img {
+              border-radius: 12px;
+              width: 100%;
+            }
+          }
+          .ytInfo {
+            flex-basis: 55%;
+          }
+        }
+      }
+    }
+    .largeContainer {
+      padding-left: 0;
+    }
+  }
+}
+@media (max-width: 314px) {
+  .playContainer {
+    .row {
+      .playVideo {
+        .plubLisher {
+          div {
+            p {
+              font-size: 1rem;
+            }
+          }
+          .button1 {
+            font-size: 0.5rem;
+            padding: 0.5rem 1rem;
+          }
+          .button1 {
+            font-size: 0.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@import "./video.css";
+@import "./about.css";
+@import "./channel.css";
+@import "./playList.css";
+@import "./footer.css";
+@import "./featured.css";

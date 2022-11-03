@@ -1,0 +1,46 @@
+.profileDemo .videoTitle {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 1.5rem;
+}
+.profileDemo .videoTitle h4 {
+  font-size: 1rem;
+  font-weight: 500;
+}
+.profileDemo .videoCards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-column-gap: 1rem;
+  grid-row-gap: 1rem;
+}
+.profileDemo .videoCards .videoCard {
+  padding-right: 0.5rem;
+  padding-top: 1rem;
+}
+.profileDemo .videoCards .videoCard img {
+  width: 13rem;
+  border-radius: 12px;
+}
+.profileDemo .videoCards .videoCard .annotation {
+  color: #5a5a5a;
+}
+
+@media (max-width: 900px) {
+  .profileDemo .videoCards {
+    display: flex;
+    flex-direction: column;
+  }
+  .profileDemo .videoCards .videoCard {
+    width: 100%;
+    padding-right: 0;
+    display: flex;
+  }
+  .profileDemo .videoCards .videoCard div {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  }
+  .profileDemo .videoCards .videoCard img {
+    width: 50%;
+  }
+}/*# sourceMappingURL=video.css.map */

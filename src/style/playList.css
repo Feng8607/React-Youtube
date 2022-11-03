@@ -1,0 +1,84 @@
+.profiList {
+  margin: 0 3rem;
+}
+.profiList .profileDemo .playcolumn .allList {
+  margin: 0;
+  padding-top: 1.5rem;
+}
+.profiList .profileDemo .playcolumn .playList {
+  border-bottom: solid #5a5a5a 1px;
+}
+.profiList .profileDemo .playcolumn .playList .finshList,
+.profiList .profileDemo .playcolumn .storageList .finshList {
+  display: flex;
+}
+.profiList .profileDemo .playcolumn .playList .finshList .fontActve,
+.profiList .profileDemo .playcolumn .storageList .finshList .fontActve {
+  color: #5a5a5a;
+}
+.profiList .profileDemo .playcolumn .playList .finshList div,
+.profiList .profileDemo .playcolumn .storageList .finshList div {
+  padding-right: 0.5rem;
+  position: relative;
+  margin: 0.5rem 0;
+}
+.profiList .profileDemo .playcolumn .playList .finshList div img,
+.profiList .profileDemo .playcolumn .storageList .finshList div img {
+  width: 12rem;
+  border-radius: 12px;
+}
+.profiList .profileDemo .playcolumn .playList .finshList div img:nth-child(2),
+.profiList .profileDemo .playcolumn .storageList .finshList div img:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+}
+.profiList .profileDemo .playcolumn .playList .finshList div img:nth-child(2):hover,
+.profiList .profileDemo .playcolumn .storageList .finshList div img:nth-child(2):hover {
+  opacity: 1;
+}
+
+@media (max-width: 900px) {
+  .profiList .profileDemo .playcolumn .allList {
+    display: none;
+  }
+  .profiList .profileDemo .playcolumn .playList .finshList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .profiList .profileDemo .playcolumn .playList .finshList .finshBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .profiList .profileDemo .playcolumn .playList .finshList .finshBox img {
+    width: 50%;
+  }
+  .profiList .profileDemo .playcolumn .playList .finshList .finshBox .listContent {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    padding-left: 1rem;
+  }
+  .profiList .profileDemo .playcolumn .storageList .finshList {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  .profiList .profileDemo .playcolumn .storageList .finshList .finshBox {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .profiList .profileDemo .playcolumn .storageList .finshList .finshBox img {
+    width: 50%;
+  }
+  .profiList .profileDemo .playcolumn .storageList .finshList .finshBox .listContent {
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    padding-left: 1rem;
+  }
+}/*# sourceMappingURL=playList.css.map */

@@ -1,0 +1,50 @@
+.profileDemo {
+  .videoTitle {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 1.5rem;
+    h4 {
+      font-size: 1rem;
+      font-weight: 500;
+    }
+  }
+  .videoCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-column-gap: 1rem;
+    grid-row-gap: 1rem;
+    .videoCard {
+      padding-right: 0.5rem;
+      padding-top: 1rem;
+      img {
+        width: 13rem;
+        border-radius: 12px;
+      }
+      .annotation {
+        color: #5a5a5a;
+      }
+    }
+  }
+}
+
+@media (max-width: 900px) {
+  .profileDemo {
+    .videoCards {
+      display: flex;
+      flex-direction: column;
+      .videoCard {
+        width: 100%;
+        padding-right: 0;
+        display: flex;
+        div {
+          display: flex;
+          flex-direction: column;
+          width: 50%;
+        }
+        img {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

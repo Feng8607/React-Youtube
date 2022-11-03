@@ -1,0 +1,37 @@
+.footer {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+  }
+  .footer nav {
+    background-color: white;
+    width: 100%;
+  }
+  .footer nav ul {
+    display: flex;
+    justify-content: space-around;
+  }
+  .footer nav ul li {
+    list-style-type: none;
+  }
+  .footer nav ul li div {
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    flex-direction: column;
+    font-size: 0.75rem;
+  }
+  .footer nav ul li div img {
+    width: 1rem;
+  }
+  .footer nav ul li .middleImg {
+    width: 2rem;
+  }
+}/*# sourceMappingURL=footer.css.map */

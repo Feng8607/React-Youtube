@@ -93,3 +93,21 @@
     }
   }
 }
+
+@media (max-width: 310px) {
+  .profiList {
+    .profileDemo {
+      .playcolumn {
+        .playList {
+          .finshList {
+            .finshBox {
+              .listContent {
+                font-size: 0.75rem;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

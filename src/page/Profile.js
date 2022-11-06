@@ -6,7 +6,7 @@ const Profile = ({ active, setActive, profile, setProfile }) => {
     <div>
       <div className={`sideBar ${active ? "smallSidebar" : null}`}>
         <nav className="shortcutLinks">
-          <Link to="./">
+          <Link to="/">
             <li>
               <img src={require("../images/home.png")} alt="" />
               <p>首頁</p>

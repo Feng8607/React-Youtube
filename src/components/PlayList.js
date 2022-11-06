@@ -41,7 +41,7 @@ const PlayList = ({ active, setActive, profile, setProfile }) => {
                     <img alt="" src={require("../images/playList/3.PNG")} />
                     <img alt="" src={require("../images/playList/4.PNG")} />
                     <div className="listContent">
-                      <p>Anime Videogame Fanart</p>
+                      <p>山水旅遊</p>
                       <p className="fontActve">查看完整播放清單</p>
                     </div>
                   </div>
